@@ -15,11 +15,14 @@ set mouse=a
 set nu
 
 " Files
-set smartcase
 set noswapfile
 
 " Search
 set incsearch
+set smartcase
+
+" Auto complete stuff
+inoremap { {<CR>}<Esc>ko
 
 
 "Mode Settings
@@ -33,7 +36,7 @@ let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 "  5 -> blinking vertical bar
 "  6 -> solid vertical bar
 
-
+"Color and Theme
 colorscheme solarized8_flat
 set background=light
 
@@ -41,16 +44,14 @@ set rtp+=~/.vim/bundle/Vundle.vim
 set nocompatible
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-
 syntax enable
 
 " Auto Complete plugin
 Plugin 'valloric/youcompleteme'
+Plugin 'jiangmiao/auto-pairs'
 
 "color
 Plugin 'rafi/awesome-vim-colorschemes'
 
 call vundle#end()
-
-vmap <leader>y "+y
 
