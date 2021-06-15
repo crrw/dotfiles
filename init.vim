@@ -4,6 +4,7 @@ call plug#begin('~/.vim/plugged')
 " Editor
 Plug 'Valloric/YouCompleteMe'
 Plug 'Raimondi/delimitMate'
+Plug 'rdnetto/ycm-generator', { 'branch': 'stable' }
 
 "UI 
 Plug 'vim-airline/vim-airline'
@@ -32,15 +33,20 @@ set noswapfile
 set incsearch
 set smartcase
 
-inoremap { {<CR>}<Esc>ko
+set clipboard+=unnamedplus
+" inoremap { {<CR>}<Esc>ko
 
-
+" cursor
 let &t_SI.="\e[5 q" "SI = INSERT mode
 let &t_SR.="\e[4 q" "SR = REPLACE mode
 let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 
 "color
 ":colo torte   
-syntax enable
+" syntax enable
 set background=light
 colorscheme solarized8_high
+
+let g:airline_powerline_fonts = 1
+let g:ycm_global_ycm_extra_conf = '~/.config/nvim/ycm_global_extra_conf.py'
+let g:ycm_autoclose_preview_window_after_insertion = 1
