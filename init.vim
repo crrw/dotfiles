@@ -25,6 +25,7 @@ set expandtab
 set nowrap
 set scrolloff=8
 set mouse=a 
+set numberwidth=3
 
 set nu
 
@@ -44,9 +45,10 @@ let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 "color
 ":colo torte   
 " syntax enable
-set background=light
+set background=dark
 colorscheme solarized8_high
 
 let g:airline_powerline_fonts = 1
 let g:ycm_global_ycm_extra_conf = '~/.config/nvim/ycm_global_extra_conf.py'
 let g:ycm_autoclose_preview_window_after_insertion = 1
+"":autocmd BufNewFile *.java 0r ~/.vimrc/templates/skeleton.java
