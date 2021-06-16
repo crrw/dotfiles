@@ -31,9 +31,15 @@ set nu
 
 set noswapfile
 
+"searching
 set incsearch
 set smartcase
+" <Ctrl-l> redraws the screen and removes any search highlighting.
+nnoremap <silent> <C-l> :nohl<CR><C-l>
 
+imap <C-BS> <C-W>
+
+"copy paste
 set clipboard+=unnamedplus
 " inoremap { {<CR>}<Esc>ko
 
@@ -48,7 +54,8 @@ let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 set background=dark
 colorscheme solarized8_high
 
+
 let g:airline_powerline_fonts = 1
-let g:ycm_global_ycm_extra_conf = '~/.config/nvim/ycm_global_extra_conf.py'
 let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/.ycm_extra_conf.py'
 "":autocmd BufNewFile *.java 0r ~/.vimrc/templates/skeleton.java
