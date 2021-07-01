@@ -1,5 +1,5 @@
 call plug#begin('~/.vim/plugged')
-" Plugin Section
+" plugin section
 
 " Editor
 Plug 'Valloric/YouCompleteMe'
@@ -33,11 +33,13 @@ set noswapfile
 
 set incsearch
 set smartcase
+set ignorecase
+set nohlsearch
 
 set clipboard+=unnamedplus
 
 " <Ctrl-l> redraws the screen and removes any search highlighting.
-nnoremap <C-l> :nohl<CR><C-l>
+" nnoremap <silent> <C-;> :nohl<CR><C-l>
 
 
 " cursor
@@ -53,9 +55,9 @@ nnoremap<C-H> <C-W><C-H>
 
 "color
 ":colo torte   
-" syntax enable
-set background=dark
-colorscheme solarized8_high
+set background=light
+colorscheme solarized
+set scl=no
 
 let g:airline_powerline_fonts = 1
 let g:ycm_global_ycm_extra_conf = '~/.config/nvim/ycm_global_extra_conf.py'
