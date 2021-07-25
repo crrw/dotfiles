@@ -38,9 +38,9 @@ set nohlsearch
 
 set clipboard+=unnamedplus
 
-" <Ctrl-l> redraws the screen and removes any search highlighting.
-" nnoremap <silent> <C-;> :nohl<CR><C-l>
-
+" ctrl-backspace delete previous word
+noremap! <C-BS> <C-w>
+noremap! <C-h> <C-w>
 
 " cursor
 let &t_SI.="\e[5 q" "SI = INSERT mode
