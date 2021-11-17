@@ -22,10 +22,10 @@ syntax on
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
-set nowrap
 set scrolloff=8
 set mouse=a 
 set numberwidth=3
+set wrap
 
 set nu
 
@@ -57,9 +57,10 @@ nnoremap<C-H> <C-W><C-H>
 ":colo torte   
 set background=light
 colorscheme solarized
+"set background=dark
+"colorscheme gruvbox
 set scl=no
 
 let g:airline_powerline_fonts = 1
 let g:ycm_global_ycm_extra_conf = '~/.config/nvim/ycm_global_extra_conf.py'
 let g:ycm_autoclose_preview_window_after_insertion = 1
-":autocmd BufNewFile *.java 0r ~/.vimrc/templates/skeleton.java
