@@ -122,11 +122,14 @@ color_prompt=yes
 parse_git_branch() {
  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
+
+# Show time in terminal
 if [ "$color_prompt" = yes ]; then
- PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;31m\]$(parse_git_branch)\[\033[00m\]\$ '
+    PS1='\[\e[01;32m\][\D{%I:%M:%S %p}]${debian_chroot:+($debian_chroot)}\[\e[00m\]:\[\e[01;34m\]\w\[\e[00m\]\$ '
 else
- PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(parse_git_branch)\$ '
+    PS1='[\D{%I:%M:%S %p}]${debian_chroot:+($debian_chroot)}:\w\$ '
 fi
+
 unset color_prompt force_color_prompt
 
 alias sk='screenkey -g 300x300+600+630'
