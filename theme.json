@@ -1,0 +1,25 @@
+    "workbench.colorTheme": "Noctis Lux",
+    "editor.tokenColorCustomizations": {
+        // "variables": "#FF0000",
+        "keywords": "#78911e",
+        "functions": "#2b0cb6ef",
+        "strings": "#0c0c0c",
+        // "types": "#FF0000",
+        "textMateRules": [
+            {
+                "scope" : "variable.other",
+                "settings":{
+                    "foreground": "#777114",
+                    "fontStyle": "bold"
+                },
+            },
+            {
+                "scope" : "variable.parameter",
+                "settings": {
+                    "foreground": "#FF0000",
+                    "fontStyle": "bold"
+                }
+            }
+        ]
+    },
+
